@@ -1,0 +1,245 @@
+/* ---- reset ---- */
+body {
+  margin: 0;
+  font: normal 75% Arial, Helvetica, sans-serif;
+}
+canvas {
+  display: block;
+  vertical-align: bottom;
+} /* ---- particles.js container ---- */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-image: url("../img/1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+} /* ---- stats.js ---- */
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+.js-count-particles {
+  font-size: 1.1em;
+}
+#stats,
+.count-particles {
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+.count-particles {
+  border-radius: 0 0 3px 3px;
+}
+.login-reg-panel{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  text-align:center;
+    width:70%;
+  right:0;left:0;
+    margin:auto;
+    height:400px;
+    background-color: none;
+}
+.white-panel{
+    background-color: transparent;
+    height:500px;
+    position:absolute;
+    top:-50px;
+    width:50%;
+    right:calc(50% - 50px);
+    transition:.3s ease-in-out;
+    z-index:0;
+}
+.login-reg-panel input[type="radio"]{
+    position:relative;
+    display:none;
+}
+.login-reg-panel{
+    color:#ffffff;
+}
+.login-reg-panel #label-login, 
+.login-reg-panel #label-register{
+    position: absolute;
+    border:2px solid #9E9E9E;
+    padding:15px 15px;
+    width:150px;
+    display:block;
+    text-align:center;
+    font-size: 20px;
+    border-radius:3px;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b,#03a9f4);
+    cursor:pointer;
+    border-radius: 30px;
+    background-size: 250%;
+    z-index: 1;
+
+}
+.login-reg-panel #label-register:hover {
+  animation: animate 8s linear infinite;
+}
+.login-reg-panel #label-login:hover {
+  animation: animate 8s linear infinite;
+}
+
+@keyframes animate{
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+}
+
+}
+.login-info-box{
+    width:30%;
+    padding:0 50px;
+    top:20%;
+    left:0;
+    position:absolute;
+    text-align:left;
+}
+.register-info-box{
+    width:30%;
+    padding:0 50px;
+    top:20%;
+    right:0;
+    position:absolute;
+    text-align:left;
+    
+}
+.right-log{right:50px !important;}
+
+.login-show, 
+.register-show{
+    z-index: 1;
+    display:none;
+    opacity:0;
+    transition:0.3s ease-in-out;
+    color:#ffffff ;
+    text-align:left;
+    padding:100px;
+}
+.show-log-panel{
+    display:block;
+    opacity:0.9;
+}
+.login-show input[type="text"], .login-show input[type="password"]{
+    width: 100%;
+    display: block;
+    margin:20px 0;
+    padding: 15px;
+    border: 2px solid #7575a3;
+    outline: none;
+}
+.login-show input[type="submit"] {
+    max-width: 150px;
+    width: 100%;
+    background: #00264d;
+    background-size: 250%;
+    color: #f9f9f9;
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    float:right;
+    cursor:pointer;
+}
+.login-show input[type="button"]:hover {
+  animation: animates 8s linear infinite;
+}
+@keyframes animates{
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+}
+
+}
+
+
+ .login-show a{
+    display:inline-block;
+    padding:10px 0;
+}
+
+.register-show input[type="text"], .register-show input[type="password"]{
+    width: 100%;
+    display: block;
+    margin:20px 0;
+    padding: 15px;
+    border: 1px solid #b5b5b5;
+    outline: none;
+}
+.register-show input[type="button"] {
+    max-width: 150px;
+    width: 100%;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b,#03a9f4);
+    background-size: 250%;
+    color: #f9f9f9;
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    float:right;
+    cursor:pointer;
+}
+.register-show input[type="button"]:hover {
+  animation: animat 8s linear infinite;
+}
+@keyframes animat{
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+}
+}
+.credit {
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    color: #3B3B25;
+    margin: 0;
+    padding: 0;
+    font-family: Arial,sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    z-index: 99;
+}@import url('https://fonts.googleapis.com/css?family=Mukta');
+body{
+  font-family: 'Mukta', sans-serif;
+  height:100vh;
+  min-height:550px;
+  
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:center;
+  position:relative;
+    overflow-y: hidden;
+}
+a{
+  text-decoration: none;
+  color:#444444;
+}

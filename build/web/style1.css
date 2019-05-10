@@ -1,0 +1,118 @@
+
+
+#h{
+color:#333333;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+body:after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2196f3,#ecf2f9 55%);
+    mix-blend-mode: soft-light;
+    pointer-events: none;
+}
+.track
+{
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    width: 150px;
+    height: 50px;
+    background: transparent;
+    border-bottom: 2px solid #262626;
+    transition: 2s;
+}
+.track:hover
+{
+    transform: translate(-50%,-50%) scale(5);
+}
+.track:before
+{
+    content: '';
+    position: absolute;
+    top: 52px;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background: #359dea;
+}
+.square
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%,-50%);
+    width: 50px;
+    height: 50px;
+    background: #63b2ed;
+    border: 4px solid #262626;
+    box-sizing: border-box;
+    animation: animate 1s linear infinite;
+}
+.square:nth-child(2)
+{
+    left: initial;
+    right: 0;
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform-origin: bottom right;
+        transform: translate(-50%,-50%) rotate(0deg) translateX(25px);  
+    }
+    50%
+    {
+        transform-origin: bottom right;
+        transform: translate(-50%,-50%) rotate(90deg);  
+    }
+    100%
+    {
+        transform-origin: bottom right;
+        transform: translate(-50%,-50%) rotate(90deg) translateY(25px);  
+    }
+}
+@keyframes animate2
+{
+    0%
+    {
+        transform-origin: bottom left;
+        transform: translate(-50%,-50%) rotate(0deg) translateX(25px);  
+    }
+    50%
+    {
+        transform-origin: bottom left;
+        transform: translate(50%,-50%) rotate(-90deg);  
+    }
+    100%
+    {
+        transform-origin: bottom left;
+        transform: translate(50%,-50%) rotate(-90deg) translateY(25px);  
+    }
+}
+video
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    mix-blend-mode: difference;
+    pointer-events: none;
+}
